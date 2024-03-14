@@ -6,6 +6,6 @@ class BaseView
 {
     public function render($page, $data)
     {
-        include $_SERVER['DOCUMENT_ROOT']. "/com". $page;
+        include $_SERVER['DOCUMENT_ROOT']. "/autoparks". $page;
     }
 }
