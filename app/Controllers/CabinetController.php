@@ -3,14 +3,17 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\CabinetModel;
 
 class CabinetController extends BaseController
 {   
     private string $view_main = "/views/main.php";
+    private string $view_parks = "/views/parks.php";
     private array $data = [];
     
     /**
      * Подгружаем шаблон
+     * Главная страница
      *
      * @param 
      * @return render
@@ -22,6 +25,20 @@ class CabinetController extends BaseController
         }else{
             echo "Просмотр страницы возможен только для авторизованных пользователей!";
         }
+    }
+    
+    /**
+     * Подгружаем шаблон
+     * Список автопарков
+     *
+     * @param 
+     * @return render
+     */
+    public function ShowAutoparks()
+    {
+        $action = new CabinetModel;
+        //$this->data = $action->SelectParks();
+        $this->view->render($this->view_parks, $this->data);
     }
 
 }

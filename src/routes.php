@@ -31,3 +31,9 @@ if ($route[2] == "main"){
     $action = new CabinetController();
     $action->ShowCabinet();
 }
+
+//Страница со списком парков
+if ($route[2] == "parks"){
+    $action = new CabinetController();
+    $action->ShowAutoparks();
+}
