@@ -2,6 +2,7 @@
 
 use App\Controllers\RouteController;
 use App\Controllers\LoginController;
+use App\Controllers\CabinetController;
 
 //Запускаем разбор адресной строки
 //Получаем нужное нам значение
@@ -19,8 +20,14 @@ if ($route[2] == "seeder"){
     $action->AddUsers();
 }
 
-//Запускаем заполнение таблицы users
+//Процес авторизации
 if ($route[2] == "authentication"){
     $action = new LoginController;
     $action->ExaminAuth();
+}
+
+//Главная страница приложения
+if ($route[2] == "main"){
+    $action = new CabinetController();
+    $action->ShowCabinet();
 }
