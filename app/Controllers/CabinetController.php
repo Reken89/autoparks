@@ -9,7 +9,7 @@ class CabinetController extends BaseController
 {   
     private string $view_main = "/views/main.php";
     private string $view_parks = "/views/parks.php";
-    private array $data = [];
+    private $data;
     
     /**
      * Подгружаем шаблон
@@ -37,7 +37,7 @@ class CabinetController extends BaseController
     public function ShowAutoparks()
     {
         $action = new CabinetModel;
-        //$this->data = $action->SelectParks();
+        $this->data = $action->SelectParks();
         $this->view->render($this->view_parks, $this->data);
     }
 

@@ -31,8 +31,8 @@
         </thead>
     </table>
 </div>
-    
-    
+
+        
 <!-- All Script JS Plugins here  -->
 <script src="../assets/js/vendor/popper.js" defer="defer"></script>
 <script src="../assets/js/vendor/bootstrap.min.js" defer="defer"></script>
